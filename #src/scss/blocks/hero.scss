@@ -1,0 +1,92 @@
+.hero {
+    background-image: url('../img/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(39, 25, 69, 0.5);
+        content: '';
+    }
+
+
+    &__in {
+        padding: 220px 0;
+        position: relative;
+        z-index: 2;
+        
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 450px;
+            height: 450px;
+            bottom: -300px;
+            left: 25%;
+            background: #FF106A;
+            filter: blur(300px);
+        }
+
+        &:before {
+            width: 550px;
+            height: 550px;
+            position: absolute;
+            content: '';
+            bottom: -300px;
+            right: 0;
+            background: #FFA800;
+            filter: blur(300px);
+
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        font-family: 'TTFirsNeue';
+        position: relative;
+        z-index: 5;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .hero {
+
+        &__in {
+            padding: 130px 0 220px;
+
+            &:after {
+                width: 250px;
+                height: 250px;
+                bottom: -100px;
+                filter: blur(150px);
+                right: -100px;
+            }
+
+            &:before {
+                width: 250px;
+                height: 250px;
+                bottom: -100px;
+                filter: blur(150px);
+                right: -100px;
+            }
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 40px;
+        }
+    }
+}

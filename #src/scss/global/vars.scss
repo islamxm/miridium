@@ -1,0 +1,14 @@
+:root {
+    --text: #1F1F1F;
+    --btn: linear-gradient(183.5deg, #FF0E6B 2.88%, #FFCB42 151.19%);
+
+    --hover: #FF106A;
+
+        
+}
+
+
+@mixin def-anim {
+    transition: all .3s ease;
+}
+

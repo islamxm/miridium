@@ -1,0 +1,101 @@
+.pr {
+    background-color: #40305C;
+
+    &__in {
+        padding: 60px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__main {
+        width: 48%;
+        &_title {
+            font-weight: 600;
+            font-size: 46px;
+            line-height: 48px;
+            /* or 104% */
+
+            letter-spacing: -0.04em;
+
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            font-family: 'TTFirsNeue';
+        }
+
+        &_text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+            
+            letter-spacing: -0.02em;
+            
+            color: #FFFFFF;
+        }
+    }
+
+    &__list {
+        background: #FFFFFF;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+        width: 48%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px;
+        margin-bottom: -120px;
+        &_item {
+            width: calc(100% / 5);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                display: flex;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .pr {
+        margin-bottom: 40px;
+        &__in {
+            flex-wrap: wrap;
+            padding: 35px 0 80px;
+        }
+        &__main {
+            width: 100%;
+            &_text {    
+                margin-bottom: 25px;
+            }
+        }
+        &__list {
+            width: 100%;
+            padding: 20px;
+
+            &_item {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pr {
+
+        &__main {
+            
+            &_title {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
