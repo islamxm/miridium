@@ -33,6 +33,16 @@
         overflow-y: auto;
     }
 
+    &__item.is-active {
+
+        .mobmenu__item_head {
+
+            &_btn {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
     &__item {
         padding: 20px 0;
         border-top: 1px solid #efefefef;
@@ -51,10 +61,18 @@
             &_btn {
                 width: 30px;
                 height: 30px;
-                background-color: var(--hover);
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 position: absolute;
                 top: 0;
                 left: -50px;
+                background-image: url('../img/icons/acc-icon.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                @include def-anim;
+
             }
 
             a {
